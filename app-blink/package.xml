@@ -1,0 +1,13 @@
+<package format="2">
+    <name>app-blink</name>
+    <version>0.0.0</version>
+    <description>
+        A package which builds a blink Hello World executable for the STM32F446
+        Nucleo board.
+    </description>
+    <maintainer email="ssnover95@gmail.com">Shane Snover</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+    <depend>stm32-hal-f4</depend>
+</package>

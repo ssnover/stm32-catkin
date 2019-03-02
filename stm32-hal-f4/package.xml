@@ -1,0 +1,12 @@
+<package format="2">
+    <name>stm32-hal-f4</name>
+    <version>0.0.0</version>
+    <description>
+        A package containing libraries for interfacing with STMicroelectronics
+        HAL library for STM32F4 microcontrollers.
+    </description>
+    <maintainer email="ssnover95@gmail.com">Shane Snover</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+</package>
