@@ -10,23 +10,25 @@ find_package(catkin REQUIRED)
 # CATKIN PACAKGE
 #
 catkin_package(
-    INCLUDE_DIRS 
-        Drivers/CMSIS/Include
-        Drivers/CMSIS/Device/ST/STM32F4xx/Include
-        Drivers/STM32F4xx_HAL_Driver/Inc
+    INCLUDE_DIRS
+    Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    Drivers/CMSIS/Include
+    Drivers/STM32F4xx_HAL_Driver/Inc
     LIBRARIES
-        stm32f4_hal_uart
+    stm32f4_hal_conf
+    stm32f4_hal_gpio
+    stm32f4_hal_uart
 )
 
 #
 # INCLUDES
 #
 include_directories(
-        include
-        ${catkin_INCLUDE_DIRS}
-        Drivers/CMSIS/Include
-        Drivers/CMSIS/Device/ST/STM32F4xx/Include
-        Drivers/STM32F4xx_HAL_Driver/Inc
+    include
+    ${catkin_INCLUDE_DIRS}
+    Drivers/CMSIS/Device/ST/STM32F4xx/Include
+    Drivers/CMSIS/Include
+    Drivers/STM32F4xx_HAL_Driver/Inc
 )
 
 #
@@ -47,3 +49,6 @@ add_definitions(
 add_library(stm32f4_hal STATIC ${HAL_SOURCE_DIR}/stm32f4xx_hal.c)
 add_library(stm32f4_hal_gpio STATIC ${HAL_SOURCE_DIR}/stm32f4xx_hal_gpio.c)
 add_library(stm32f4_hal_uart STATIC ${HAL_SOURCE_DIR}/stm32f4xx_hal_uart.c)
+
+add_library(stm32f4_hal_conf INTERFACE)
+target_include_directories(stm32f4_hal_conf INTERFACE include/)

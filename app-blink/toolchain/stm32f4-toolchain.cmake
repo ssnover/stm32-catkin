@@ -22,3 +22,5 @@ add_definitions(
     -D__weak=__attribute__\(\(weak\)\)
     -D__packed=__attriubte__\(\(__packed__\)\)
 )
+
+# NOTE: To make this work I had to remove the assert in ROS's rt.cmake file

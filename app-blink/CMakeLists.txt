@@ -35,6 +35,7 @@ set(CMAKE_CXX_FLAGS_INIT "${COMMON_FLAGS} --std=c++17")
 set(CMAKE_C_FLAGS_INIT "${COMMON_FLAGS} --std=gnu99")
 
 add_executable(app-blink ${PROJECT_SOURCE_DIR}/src/main.cpp)
+target_include_directories(app-blink PRIVATE ${catkin_INCLUDE_DIRS})
 target_link_libraries(app-blink ${catkin_LIBRARIES} stm32f4_hal_gpio)
 target_compile_options(app-blink
     PRIVATE
@@ -53,5 +54,6 @@ target_compile_definitions(app-blink
         -DARM_MATH_CM4
         -DARM_MATH_MATRIX_CHECK
         -DARM_MATH_ROUNDING
+        -D__FPU_PRESENT=1U
         -D__weak=__attribute__\(\(weak\)\)
         -D__packed=__attriubte__\(\(__packed__\)\))

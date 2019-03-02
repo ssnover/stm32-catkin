@@ -2,15 +2,9 @@
  * file: main.cpp
  */
 
-#include <stm32f4xx_hal_cortex.h>
-#include <stm32f4xx_hal_gpio.h>
-#include <stm32f4xx_hal_rcc.h>
+#include "stm32f4xx.h"
 #include <core_cm4.h>
-#include <stm32f446xx.h>
-#include <stm32f4xx_hal_pwr_ex.h>
-#include <stm32f4xx_hal_flash_ex.h>
-#include "stm32f4xx_hal.h"
-#include "stm32f4xx_hal_uart.h"
+#include "stm32f4xx_hal_conf.h"
 
 UART_HandleTypeDef huart1;
 
