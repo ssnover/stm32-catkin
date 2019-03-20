@@ -1,0 +1,12 @@
+<package format="2">
+    <name>hardware-intf</name>
+    <version>0.0.0</version>
+    <description>
+        A package which provides CRTP interface classes for low level hardware
+        resources.
+    </description>
+    <maintainer email="ssnover95@gmail.com">Shane Snover</maintainer>
+    <license>MIT</license>
+
+    <buildtool_depend>catkin</buildtool_depend>
+</package>

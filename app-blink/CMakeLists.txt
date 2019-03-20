@@ -50,6 +50,7 @@ target_compile_options(app-blink
         -mthumb-interwork
         -ffunction-sections
         -fdata-sections
+        -fno-exceptions
         -mfloat-abi=soft
         -mfpu=fpv4-sp-d16)
 target_compile_definitions(app-blink
@@ -73,5 +74,6 @@ target_link_libraries(app-blink
     -specs=nano.specs
     -mfloat-abi=soft
     -mfpu=fpv4-sp-d16
+    -fno-exceptions
     #-Wl,-gc-sections
     "-T ${LINKER_SCRIPT}")
